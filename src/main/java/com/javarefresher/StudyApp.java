@@ -1,17 +1,17 @@
 package com.javarefresher;
 
-import com.javarefresher.core.ConsolePrinter;
-import com.javarefresher.core.StudyTopic;
-import com.javarefresher.topics.collections.CollectionsStudyTopic;
-import com.javarefresher.topics.concurrency.ConcurrencyStudyTopic;
-import com.javarefresher.topics.inheritance.InheritanceStudyTopic;
-import com.javarefresher.topics.immutability.ImmutabilityStudyTopic;
-import com.javarefresher.topics.springmvc.SpringMvcStudyTopic;
-
 import java.util.Arrays;
 import java.util.List;
 import java.util.Locale;
 import java.util.Scanner;
+
+import com.javarefresher.core.ConsolePrinter;
+import com.javarefresher.core.StudyTopic;
+import com.javarefresher.topics.collections.CollectionsStudyTopic;
+import com.javarefresher.topics.concurrency.ConcurrencyStudyTopic;
+import com.javarefresher.topics.immutability.ImmutabilityStudyTopic;
+import com.javarefresher.topics.inheritance.InheritanceStudyTopic;
+import com.javarefresher.topics.springmvc.SpringMvcStudyTopic;
 
 public final class StudyApp {
     private final ConsolePrinter printer = new ConsolePrinter();
@@ -126,6 +126,7 @@ public final class StudyApp {
         for (StudyTopic topic : topics) {
             System.out.printf("- %s : %s%n", topic.key(), topic.title());
         }
+        printer.section("Instruction:", "Use `.\\scripts\\study.ps1 -TopicKey <topic_key>` to run a specific topic.");
     }
 
     private void printUsage() {

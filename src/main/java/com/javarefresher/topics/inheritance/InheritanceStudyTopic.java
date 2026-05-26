@@ -1,15 +1,17 @@
 package com.javarefresher.topics.inheritance;
 
+import java.util.List;
+
 import com.javarefresher.core.ConsolePrinter;
 import com.javarefresher.core.StudyTopic;
 import com.javarefresher.topics.inheritance.model.Animal;
 import com.javarefresher.topics.inheritance.model.Dog;
 import com.javarefresher.topics.inheritance.model.Goose;
+import com.javarefresher.topics.inheritance.model.HouseCat;
 import com.javarefresher.topics.inheritance.model.Lion;
 import com.javarefresher.topics.inheritance.model.MallardDuck;
 import com.javarefresher.topics.inheritance.model.Sparrow;
-
-import java.util.List;
+import com.javarefresher.topics.inheritance.model.Wolf;
 
 public final class InheritanceStudyTopic implements StudyTopic {
     @Override
@@ -38,7 +40,9 @@ public final class InheritanceStudyTopic implements StudyTopic {
         System.out.println("Polymorphic talk() output:");
         List<Animal> animals = List.of(
                 new Lion("Simba"),
+                new HouseCat("Princess Donut"),
                 new Dog("Rex"),
+                new Wolf("Alpha"),
                 new MallardDuck("Daisy"),
                 new Goose("Gus"),
                 new Sparrow("Pip")

@@ -10,8 +10,7 @@ public final class Dog extends Canine {
         return "dog";
     }
 
-    @Override
-    protected String canineSound() {
-        return "bark";
-    }
+    // Inheritance and polymorphism: 
+    // All Canines "bark" - Call the parent class's canineSound method
+    // to get the default "bark" behavior without needing to duplicate it here.
 }

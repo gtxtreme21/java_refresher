@@ -15,5 +15,9 @@ public abstract class Canine extends AbstractAnimal {
         return canineSound();
     }
 
-    protected abstract String canineSound();
+    /* Take advantage of the fact that all canines bark, 
+    but allow subclasses to modify the sound if needed. */
+    protected String canineSound() {
+        return "bark";
+    }
 }
