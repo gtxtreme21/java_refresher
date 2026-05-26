@@ -1,7 +1,7 @@
 # Java Lead Developer Refresher
 This repository contains a Java console study app focused on common Lead Developer interview topics.
 ## Current phase
-Phase 1 is implemented, with inheritance in Phase 2, concurrency in Phase 3, and collections in Phase 4:
+Phase 1 is implemented, with inheritance in Phase 2, concurrency in Phase 3, collections in Phase 4, and Spring MVC patterns in Phase 5:
 - project scaffold and package layout
 - menu/list/all topic runner
 - study-output formatting template
@@ -9,6 +9,7 @@ Phase 1 is implemented, with inheritance in Phase 2, concurrency in Phase 3, and
 - concrete inheritance/polymorphism study example
 - concrete concurrency shared-resource protection study example
 - concrete collections looping/CRUD safety study example
+- concrete Spring MVC layering/patterns study example
 ## Run the app
 From `C:\1_app_dev\java\java_refresher`:
 - Run all topics (recommended study mode):

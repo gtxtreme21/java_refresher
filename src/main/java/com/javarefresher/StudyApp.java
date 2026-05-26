@@ -6,6 +6,7 @@ import com.javarefresher.topics.PlaceholderTopic;
 import com.javarefresher.topics.collections.CollectionsStudyTopic;
 import com.javarefresher.topics.concurrency.ConcurrencyStudyTopic;
 import com.javarefresher.topics.inheritance.InheritanceStudyTopic;
+import com.javarefresher.topics.springmvc.SpringMvcStudyTopic;
 
 import java.util.Arrays;
 import java.util.List;
@@ -18,15 +19,7 @@ public final class StudyApp {
             new InheritanceStudyTopic(),
             new ConcurrencyStudyTopic(),
             new CollectionsStudyTopic(),
-            new PlaceholderTopic(
-                    "spring-mvc",
-                    "Spring Boot MVC Patterns and Antipatterns",
-                    "Refresh controller/service/repository responsibilities and boundary-focused design.",
-                    "Layered Architecture + Dependency Injection",
-                    "Placing business logic in controllers and leaking persistence objects to API boundaries.",
-                    "Keep thin controllers, cohesive services, and explicit DTO mapping between layers.",
-                    "Interviewers often assess architecture judgment and maintainability trade-offs."
-            ),
+            new SpringMvcStudyTopic(),
             new PlaceholderTopic(
                     "immutability",
                     "Immutability and Thread-Safety Design",
@@ -81,7 +74,7 @@ public final class StudyApp {
         for (StudyTopic topic : topics) {
             topic.run(printer);
         }
-        printer.section("Next step", "Upcoming phases will replace remaining placeholder topics with full runnable code walkthroughs.");
+        printer.section("Next step", "The immutability topic remains as the final placeholder to convert into a full runnable module.");
     }
 
     private void runSingleTopic(String key) {
