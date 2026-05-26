@@ -3,6 +3,7 @@ package com.javarefresher;
 import com.javarefresher.core.ConsolePrinter;
 import com.javarefresher.core.StudyTopic;
 import com.javarefresher.topics.PlaceholderTopic;
+import com.javarefresher.topics.concurrency.ConcurrencyStudyTopic;
 import com.javarefresher.topics.inheritance.InheritanceStudyTopic;
 
 import java.util.Arrays;
@@ -14,15 +15,7 @@ public final class StudyApp {
     private final ConsolePrinter printer = new ConsolePrinter();
     private final List<StudyTopic> topics = List.of(
             new InheritanceStudyTopic(),
-            new PlaceholderTopic(
-                    "concurrency",
-                    "Concurrency and Shared Resource Protection",
-                    "Compare unsafe shared-state updates with synchronized and lock-based protection approaches.",
-                    "Monitor Object (`synchronized`) + explicit Lock",
-                    "Mutating shared state from multiple threads with no coordination.",
-                    "Use thread-safe coordination primitives and limit shared mutability.",
-                    "Interviewers validate your ability to prevent race conditions and data corruption."
-            ),
+            new ConcurrencyStudyTopic(),
             new PlaceholderTopic(
                     "collections",
                     "Looping, CRUD, and Collection Pitfalls",
