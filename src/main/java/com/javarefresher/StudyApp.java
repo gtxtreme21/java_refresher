@@ -9,6 +9,7 @@ import com.javarefresher.core.ConsolePrinter;
 import com.javarefresher.core.StudyTopic;
 import com.javarefresher.topics.collections.CollectionsStudyTopic;
 import com.javarefresher.topics.concurrency.ConcurrencyStudyTopic;
+import com.javarefresher.topics.concurrencypatterns.ConcurrencyPatternsStudyTopic;
 import com.javarefresher.topics.immutability.ImmutabilityStudyTopic;
 import com.javarefresher.topics.inheritance.InheritanceStudyTopic;
 import com.javarefresher.topics.springmvc.SpringMvcStudyTopic;
@@ -18,6 +19,7 @@ public final class StudyApp {
     private final List<StudyTopic> topics = List.of(
             new InheritanceStudyTopic(),
             new ConcurrencyStudyTopic(),
+            new ConcurrencyPatternsStudyTopic(),
             new CollectionsStudyTopic(),
             new SpringMvcStudyTopic(),
             new ImmutabilityStudyTopic()
