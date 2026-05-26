@@ -3,6 +3,7 @@ package com.javarefresher;
 import com.javarefresher.core.ConsolePrinter;
 import com.javarefresher.core.StudyTopic;
 import com.javarefresher.topics.PlaceholderTopic;
+import com.javarefresher.topics.inheritance.InheritanceStudyTopic;
 
 import java.util.Arrays;
 import java.util.List;
@@ -12,15 +13,7 @@ import java.util.Scanner;
 public final class StudyApp {
     private final ConsolePrinter printer = new ConsolePrinter();
     private final List<StudyTopic> topics = List.of(
-            new PlaceholderTopic(
-                    "inheritance",
-                    "Inheritance and Polymorphism (Animal hierarchy)",
-                    "Practice interface contracts, abstract defaults, and subclass-specific behavior overrides.",
-                    "Template Method + interface-driven polymorphism",
-                    "Relying on type checks everywhere (`instanceof`) instead of polymorphic dispatch.",
-                    "Use an `Animal` contract and enforce behavior overrides where needed while sharing safe defaults.",
-                    "Lead roles are expected to design extensible models without scattered conditional logic."
-            ),
+            new InheritanceStudyTopic(),
             new PlaceholderTopic(
                     "concurrency",
                     "Concurrency and Shared Resource Protection",
@@ -102,7 +95,7 @@ public final class StudyApp {
         for (StudyTopic topic : topics) {
             topic.run(printer);
         }
-        printer.section("Next step", "Phase 2 will replace placeholders with full code walkthroughs.");
+        printer.section("Next step", "Upcoming phases will replace remaining placeholder topics with full runnable code walkthroughs.");
     }
 
     private void runSingleTopic(String key) {
