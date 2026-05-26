@@ -3,6 +3,7 @@ package com.javarefresher;
 import com.javarefresher.core.ConsolePrinter;
 import com.javarefresher.core.StudyTopic;
 import com.javarefresher.topics.PlaceholderTopic;
+import com.javarefresher.topics.collections.CollectionsStudyTopic;
 import com.javarefresher.topics.concurrency.ConcurrencyStudyTopic;
 import com.javarefresher.topics.inheritance.InheritanceStudyTopic;
 
@@ -16,15 +17,7 @@ public final class StudyApp {
     private final List<StudyTopic> topics = List.of(
             new InheritanceStudyTopic(),
             new ConcurrencyStudyTopic(),
-            new PlaceholderTopic(
-                    "collections",
-                    "Looping, CRUD, and Collection Pitfalls",
-                    "Review safe versus unsafe mutation patterns while iterating and updating collections.",
-                    "Iterator pattern + defensive-copy strategy",
-                    "Removing or adding elements directly in enhanced for-loops, causing runtime failures or logic bugs.",
-                    "Use `Iterator.remove`, collect-then-apply changes, or stream transformations.",
-                    "Lead engineers must prevent subtle production bugs caused by unsafe collection mutations."
-            ),
+            new CollectionsStudyTopic(),
             new PlaceholderTopic(
                     "spring-mvc",
                     "Spring Boot MVC Patterns and Antipatterns",
