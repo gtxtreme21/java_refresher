@@ -54,6 +54,7 @@ public final class SpringMvcStudyTopic implements StudyTopic {
         System.out.println(" - Use constructor injection to keep dependencies explicit and test-friendly.");
         System.out.println(" - Keep controllers orchestration-focused, not business-rule-focused.");
         System.out.println(" - Map entities to DTOs so API contracts can evolve independently from persistence models.");
+        printLeadInterviewQa();
     }
 
     private static <T> String formatResponse(ApiResponse<T> response) {
@@ -187,5 +188,18 @@ public final class SpringMvcStudyTopic implements StudyTopic {
                     entity.compensationBand()
             );
         }
+    }
+
+    private void printLeadInterviewQa() {
+        System.out.println();
+        System.out.println("Lead Interview Q&A:");
+        System.out.println(" Q1: Why keep controllers thin in Spring MVC?");
+        System.out.println("  A: Controllers should handle HTTP concerns and orchestration only; business rules belong in services for reuse and testability.");
+        System.out.println(" Q2: Why map entities to DTOs instead of returning entities directly?");
+        System.out.println("  A: DTOs protect internal schema details and let API contracts evolve independently from persistence models.");
+        System.out.println(" Q3: Why is constructor injection preferred?");
+        System.out.println("  A: It makes dependencies explicit, supports immutability, and simplifies deterministic unit tests.");
+        System.out.println(" Q4: Where should exception translation happen?");
+        System.out.println("  A: Service raises domain exceptions; controller or global handler maps them to consistent HTTP responses.");
     }
 }

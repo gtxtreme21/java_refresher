@@ -53,5 +53,19 @@ public final class InheritanceStudyTopic implements StudyTopic {
         System.out.println(" - Avoid if/else trees like: if (animal instanceof Lion) { ... }");
         System.out.println(" - Prefer: animal.talk() and let polymorphism choose the behavior.");
         printer.section("Interview angle", "Waterfowl subclasses inherit quack behavior, while songbirds inherit chirp behavior from a different bird sub-family.");
+        printLeadInterviewQa();
+    }
+
+    private void printLeadInterviewQa() {
+        System.out.println();
+        System.out.println("Lead Interview Q&A:");
+        System.out.println(" Q1: Why combine an interface with abstract base classes here?");
+        System.out.println("  A: Use the interface (`Animal`) for a stable contract and abstract classes for shared behavior (template `talk()` flow).");
+        System.out.println(" Q2: How does this design support Open/Closed Principle?");
+        System.out.println("  A: New animal types are added through new subclasses, without modifying caller code that already depends on `Animal`.");
+        System.out.println(" Q3: Why is `instanceof` branching considered an antipattern in this case?");
+        System.out.println("  A: It centralizes behavior selection, grows fragile as types scale, and bypasses polymorphic dispatch.");
+        System.out.println(" Q4: When should intermediate classes like `Waterfowl` exist?");
+        System.out.println("  A: When multiple related subclasses share a stable default behavior (`quack`) that should be inherited once.");
     }
 }

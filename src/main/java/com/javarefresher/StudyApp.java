@@ -2,10 +2,10 @@ package com.javarefresher;
 
 import com.javarefresher.core.ConsolePrinter;
 import com.javarefresher.core.StudyTopic;
-import com.javarefresher.topics.PlaceholderTopic;
 import com.javarefresher.topics.collections.CollectionsStudyTopic;
 import com.javarefresher.topics.concurrency.ConcurrencyStudyTopic;
 import com.javarefresher.topics.inheritance.InheritanceStudyTopic;
+import com.javarefresher.topics.immutability.ImmutabilityStudyTopic;
 import com.javarefresher.topics.springmvc.SpringMvcStudyTopic;
 
 import java.util.Arrays;
@@ -20,15 +20,7 @@ public final class StudyApp {
             new ConcurrencyStudyTopic(),
             new CollectionsStudyTopic(),
             new SpringMvcStudyTopic(),
-            new PlaceholderTopic(
-                    "immutability",
-                    "Immutability and Thread-Safety Design",
-                    "Use immutable domain data and controlled state transitions to reduce concurrency risk.",
-                    "Immutable Value Object pattern",
-                    "Mutable shared objects passed broadly across threads with unclear ownership.",
-                    "Prefer immutable objects and narrowly scoped mutation points.",
-                    "This demonstrates senior-level decision-making around correctness and operability."
-            )
+            new ImmutabilityStudyTopic()
     );
 
     public static void main(String[] args) {
@@ -74,7 +66,7 @@ public final class StudyApp {
         for (StudyTopic topic : topics) {
             topic.run(printer);
         }
-        printer.section("Next step", "The immutability topic remains as the final placeholder to convert into a full runnable module.");
+        printer.section("Next step", "Core lead-level topic set is now fully implemented; optionally add docs/pages study companion as a final publishing step.");
     }
 
     private void runSingleTopic(String key) {

@@ -52,5 +52,17 @@ public final class PlaceholderTopic implements StudyTopic {
                 whyInterviewersCare
         );
         printer.section("Phase status", "Phase 1 scaffold complete; detailed runnable code lands in upcoming phases.");
+        printLeadInterviewQa();
+    }
+
+    private void printLeadInterviewQa() {
+        System.out.println();
+        System.out.println("Lead Interview Q&A:");
+        System.out.println(" Q1: What antipattern should you call out first?");
+        System.out.println("  A: " + antipattern + " Describe the production risk and why it scales poorly.");
+        System.out.println(" Q2: What is your preferred pattern and why?");
+        System.out.println("  A: " + preferredPattern + " Explain how it improves correctness, readability, and maintainability.");
+        System.out.println(" Q3: How do you frame this at lead level?");
+        System.out.println("  A: " + whyInterviewersCare);
     }
 }

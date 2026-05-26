@@ -42,6 +42,7 @@ public final class CollectionsStudyTopic implements StudyTopic {
         System.out.println(" - Enhanced for-loop + direct remove causes runtime failure.");
         System.out.println(" - Shallow list copies do not protect against object-level mutation side effects.");
         printer.section("Interview angle", "Prefer explicit update rules, immutable boundaries, and collection operations that make side effects obvious.");
+        printLeadInterviewQa();
     }
 
     private void demonstrateIndexShiftPitfall() {
@@ -144,5 +145,18 @@ public final class CollectionsStudyTopic implements StudyTopic {
         CandidateSnapshot withStage(String updatedStage) {
             return new CandidateSnapshot(name, updatedStage);
         }
+    }
+
+    private void printLeadInterviewQa() {
+        System.out.println();
+        System.out.println("Lead Interview Q&A:");
+        System.out.println(" Q1: Why can forward-index deletes produce logic bugs?");
+        System.out.println("  A: Removing at index i shifts later elements left, so incrementing i can skip elements that still need evaluation.");
+        System.out.println(" Q2: What is the safest way to remove while iterating?");
+        System.out.println("  A: Use iterator-aware removal (`Iterator.remove`) or `removeIf` when rule-based filtering fits.");
+        System.out.println(" Q3: Why are shallow list copies risky in CRUD flows?");
+        System.out.println("  A: They duplicate container references, not objects, so mutating an item in one list mutates it everywhere.");
+        System.out.println(" Q4: How do you make collection updates more maintainable?");
+        System.out.println("  A: Prefer immutable snapshots/transformations so side effects are explicit and easier to reason about.");
     }
 }
